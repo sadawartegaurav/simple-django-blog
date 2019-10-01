@@ -61,7 +61,7 @@ def post_detail(request, post):
     context['meta'] = post.as_meta()
     return render(request, 'blog/post/detail.html', context)
 
-#https://wsvincent.com/django-search/
+
 class SearchResultsView(ListView, Post):
     model = Post
     template_name = 'blog/search_results.html'

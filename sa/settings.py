@@ -40,7 +40,6 @@ META_USE_TITLE_TAG = True
 META_USE_OG_PROPERTIES = True
 META_USE_TWITTER_PROPERTIES = True
 
-#https://simpleisbetterthancomplex.com/tutorial/2018/11/22/how-to-implement-token-authentication-using-django-rest-framework.html
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
         'rest_framework.authentication.TokenAuthentication',
@@ -129,15 +128,12 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = '/home/gaurav/jupyter/alpha_1/sa/blog/static/'
 
-#https://muawia.com/angular-87-crud-tutorial-pythondjango-rest-api/
 CORS_ORIGIN_ALLOW_ALL = True
 
-#https://samulinatri.com/blog/django-ckeditor-codesnippet-hightlightjs-youtube
 CKEDITOR_UPLOAD_PATH = "uploads/"
 MEDIA_URL = '/media/'
 MEDIA_ROOT = 'media/'
 
-#https://samulinatri.com/blog/django-ckeditor-codesnippet-hightlightjs-youtube
 CKEDITOR_CONFIGS = {
     'default': {
         'toolbar': 'Custom',

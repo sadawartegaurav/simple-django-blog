@@ -1,7 +1,7 @@
 # simple-django-blog
 Simple Django Based Blog with Rest API and SEO (Alpha Version, not suitable for production)
 
-**Django version** *2.2.5*
+**Django version** *2.2.5*,
 **Python version** *3.6.8*
 
 ### Packages Required
