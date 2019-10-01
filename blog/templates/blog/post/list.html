@@ -1,0 +1,115 @@
+{% extends "blog/base.html" %}
+{% block content %}
+<section class="section-profile-cover section-shaped my-0">
+  <!-- Circles background -->
+  <div class="shape shape-style-1 shape-primary alpha-4">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <div class="container py-lg-md d-flex">
+      <div class="col px-0">
+        <div class="row mt-5">
+          <div class="col-lg-6 mt-5">
+            <h1 class="display-3 text-white">Discover All Topics<span>completed with examples</span></h1>
+            <p class="lead  text-white">The design system comes with four pre-built pages to help you get started faster. You can change the text and images and you're good to go.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  <!-- SVG separator -->
+  <div class="separator separator-bottom separator-skew">
+    <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
+      <polygon class="fill-white" points="2560 0 2560 100 0 100"></polygon>
+    </svg>
+  </div>
+</section>
+<section class="section">
+  <div class="container">
+    <div class="card card-profile shadow mt--200">
+      <div class="px-4">
+        <div class="row justify-content-center mt-4">
+          {% for post in posts %}
+          <div class="col-lg-12 order-lg-2">
+            <div class="card flex-md-row mb-4 shadow-sm h-md-250">
+              <div class="card-body d-flex flex-column align-items-start">
+                <strong class="d-inline-block mb-2 text-success text-uppercase">{{ post.author }}</strong>
+                <h3 class=" display-3 mb-0">
+                  <a class="text-primary font-weight-light mb-2" href="{{ post.get_absolute_url }}">{{ post.title }}</a>
+                </h3>
+                <div class="mb-1 text-muted">{{ post.publish }}</div>
+                <div class="card-text mb-auto">
+                  <p>{{ post.body | safe | truncatewords:30 | linebreaks }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- This block of content is pagination -->
+{% if posts.has_other_pages %}
+<nav aria-label="Pagination"></nav>
+  <ul class="pagination justify-content-center">
+    {% if posts.has_previous %}
+    <li class="page-item">
+      <a class="page-link" href="?page={{ posts.previous_page_number }}">
+        <i class="fa fa-angle-left"></i>
+        <span class="sr-only">Previous</span>
+      </a>
+    </li>
+    {% else %}
+    <li class="page-item disabled">
+      <a class="page-link" href="#" tabindex="-1">
+        <i class="fa fa-angle-left"></i>
+        <span class="sr-only">Previous</span>
+      </a>
+    </li>
+    {% endif %}
+
+    {% for i in posts.paginator.page_range %}
+    {% if posts.number == i %}
+    <li class="page-item">
+      <span class="page-link">
+        {{ i }}
+        <span class="sr-only">
+          (current)
+        </span>
+      </span>
+    </li>
+    {% else %}
+    <li class="page-item active">
+      <a class="page-link" href="?page={{ i }}">
+        {{ i }}
+      </a>
+    </li>
+    {% endif %}
+    {% endfor %}
+
+    {% if posts.has_next %}
+    <li class="page-item">
+      <a class="page-link" href="?page={{ posts.next_page_number }}">
+        <i class="fa fa-angle-right"></i>
+        <span class="sr-only">Next</span>
+      </a>
+    </li>
+    {% else %}
+    <li class="page-item disabled">
+      <a class="page-link" href="#" tabindex="-1">
+        <i class="fa fa-angle-right"></i>
+        <span class="sr-only">Net</span>
+      </a>
+    </li>
+    {% endif %}
+    
+  </ul>
+</nav>
+{% endif %}
+{% endblock content %}
