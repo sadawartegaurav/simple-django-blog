@@ -6,7 +6,7 @@ Simple Django Based Blog with Rest API and SEO (Alpha Version, not suitable for 
 
 ### Packages Required
 * django-ckeditor (5.7.1) - `pip install django-ckeditor`
-* mdjango-mptt (0.10.0) - `pip install django-mptt`
+* django-mptt (0.10.0) - `pip install django-mptt`
 * django-meta (1.5.2) `pip install django-meta`
 * django-cors-headers (3.1.0) - `pip install django-cors-headers`
 * pillow (6.1.0) - `pip install Pillow`
