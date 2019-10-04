@@ -17,7 +17,11 @@ class PostAPIView(generics.ListCreateAPIView):
 
 
 def home(request):
-    return render(request, 'blog/home.html')
+    return render(request, 'blog/home.html', 
+        {
+            'standalone_title': 'This is home', 
+            'standalone_description':'This is standalone home page description'
+        })
 
 
 def show_category(request,hierarchy= None):
@@ -49,7 +53,12 @@ def post_list(request):
         posts = paginator.page(1)
     except EmptyPage:
         posts = paginator.page(paginator.num_pages)
-    return render(request, 'blog/post/list.html', {'posts': posts, 'page': page })
+    return render(request, 'blog/post/list.html', 
+                {
+                    'posts': posts, 'page': page, 
+                    'standalone_title': 'This is Topic Listing Page', 
+                    'standalone_description':'This is standalone topic listing page description' 
+                })
 
 
 def post_detail(request, post):

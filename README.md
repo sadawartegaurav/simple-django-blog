@@ -21,7 +21,11 @@ Simple Django Based Blog with Rest API and SEO (Alpha Version, not suitable for 
 - [x] SEO Friendly website with meta directives, opengraph and twitter card and canoncial urls
 - [x] WYSIWYG editor implementation
 - [x] Pagination
+- [x] Blog Searching
 - [ ] Dynamic Home page content and compoments
 - [ ] Related Post
-- [ ] Category Page designing
+- [ ] Category Page Designing
 - [ ] Homepage, Listing and Category Page SEO Meta issue
+- [ ] Commenting Feature
+- [ ] Subscription Feature
+- [ ] Migrating from SQLite to MariaDB

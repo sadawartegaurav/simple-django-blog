@@ -40,6 +40,7 @@ META_USE_TITLE_TAG = True
 META_USE_OG_PROPERTIES = True
 META_USE_TWITTER_PROPERTIES = True
 
+
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
         'rest_framework.authentication.TokenAuthentication',

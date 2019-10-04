@@ -5,7 +5,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head{% meta_namespaces %}>
+  {% if standalone_title %}
+    <title>Django Blog - {{ standalone_title }}</title>
+    <meta name="description" content="{{ standalone_description }}"/>
+  {% else %}
     {% include 'blog/meta/meta.html' %}
+  {% endif %}
   
   <!-- Favicon -->
   <link href="{% static 'blog/img/brand/favicon.png'%}" rel="icon" type="image/png">
@@ -18,11 +23,7 @@
   <link rel="stylesheet" type="text/css" href="{% static 'blog/css/argon.css' %}">
 
   <!-- <link rel="stylesheet" type="text/css" href="{% static 'blog/main.css' %}"> -->
-  {% if title %}
-  <title>Django Blog - {{ post.title }}</title>
-  {% else %}
-  <title>Django Blog</title>
-  {% endif %}
+
 </head>
 
 <body>
