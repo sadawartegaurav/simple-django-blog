@@ -68,6 +68,7 @@ def post_detail(request, post):
     context = {}
     context['post'] = post
     context['meta'] = post.as_meta()
+    context['post_related'] = post.tags.similar_objects()[0:3]
     return render(request, 'blog/post/detail.html', context)
 
 

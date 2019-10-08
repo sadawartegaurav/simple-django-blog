@@ -8,6 +8,7 @@ from ckeditor.fields import RichTextField
 from ckeditor_uploader.fields import RichTextUploadingField
 from mptt.models import MPTTModel, TreeForeignKey
 from meta.models import ModelMeta
+from taggit.managers import TaggableManager
 
 class PublishedManager(models.Manager):
     def get_queryset(self):
@@ -29,6 +30,7 @@ class Post(ModelMeta, models.Model):
     status = models.CharField(max_length=10,choices=STATUS_CHOICES,default='draft')
     objects = models.Manager()
     published = PublishedManager()
+    tags = TaggableManager()
 
     _metadata = {
         'title': 'title',

@@ -25,6 +25,7 @@ INSTALLED_APPS = [
     'ckeditor_uploader',
     'mptt',
     'meta',
+    'taggit',
     'django.contrib.sitemaps',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -155,5 +156,3 @@ CKEDITOR_CONFIGS = {
         'extraPlugins': ','.join(['codesnippet', 'youtube']),
     }
 }
-
- 

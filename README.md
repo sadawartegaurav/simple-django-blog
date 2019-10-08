@@ -22,10 +22,10 @@ Simple Django Based Blog with Rest API and SEO (Alpha Version, not suitable for 
 - [x] WYSIWYG editor implementation
 - [x] Pagination
 - [x] Blog Searching
+- [x] Homepage, Listing and Category Page SEO Meta issue
+- [x] Related Post
 - [ ] Dynamic Home page content and compoments
-- [ ] Related Post
 - [ ] Category Page Designing
-- [ ] Homepage, Listing and Category Page SEO Meta issue
 - [ ] Commenting Feature
 - [ ] Subscription Feature
 - [ ] Migrating from SQLite to MariaDB
